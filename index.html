@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Night Session - 究極のワンナイト人狼</title>
+  <meta name="description" content="1ゲーム5分、完全無料で遊べる究極のワンナイト心理戦。美麗なゴシックアートが彩る月夜の騙し合い。">
+  <style>
+    :root {
+      --bg-dark: #09090e;
+      --card-bg: #12121c;
+      --gold-primary: #d4af37;
+      --gold-accent: #f3e5ab;
+      --text-main: #e6e6fa;
+      --text-sub: #9ba1b0;
+      --glow-blue: rgba(147, 197, 253, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Mincho ProN", "Yu Mincho", serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 50% 10%, rgba(59, 44, 94, 0.4) 0%, transparent 60%),
+        radial-gradient(circle at 50% 60%, rgba(20, 24, 48, 0.5) 0%, transparent 70%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Hero Section */
+    header {
+      padding: 100px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .moon-badge {
+      display: inline-block;
+      padding: 6px 18px;
+      border: 1px solid var(--gold-primary);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: var(--gold-accent);
+      letter-spacing: 0.15em;
+      margin-bottom: 24px;
+      background: rgba(212, 175, 55, 0.08);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      color: #fff;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px var(--glow-blue);
+    }
+
+    .catchphrase {
+      font-size: 1.2rem;
+      color: var(--gold-accent);
+      margin-bottom: 36px;
+      font-weight: 300;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 36px;
+      background: linear-gradient(135deg, #2b1a45 0%, #151128 100%);
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid var(--gold-primary);
+      border-radius: 8px;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(212, 175, 55, 0.2);
+    }
+
+    .cta-btn:hover {
+      border-color: var(--gold-accent);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(212, 175, 55, 0.3);
+    }
+
+    /* Features Section */
+    .features {
+      padding: 60px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 8px;
+      padding: 32px 24px;
+      position: relative;
+      transition: border-color 0.3s ease;
+    }
+
+    .feature-card:hover {
+      border-color: var(--gold-primary);
+    }
+
+    .feature-title {
+      font-size: 1.2rem;
+      color: var(--gold-accent);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-desc {
+      color: var(--text-sub);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Info Section */
+    .overview {
+      padding: 60px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .overview-box {
+      background: rgba(18, 18, 28, 0.7);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 8px;
+      padding: 32px;
+      display: inline-block;
+      text-align: left;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .overview-box ul {
+      list-style: none;
+    }
+
+    .overview-box li {
+      padding: 8px 0;
+      color: var(--text-sub);
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+    }
+
+    .overview-box li:last-child {
+      border-bottom: none;
+    }
+
+    .overview-box strong {
+      color: var(--text-main);
+      display: inline-block;
+      width: 110px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      color: #666;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--gold-accent);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <span class="moon-badge">1ゲーム5分・完全無料</span>
+      <h1>夜が明ける前に、嘘を見破れ。</h1>
+      <p class="catchphrase">美麗なゴシックアートが彩る、究極のワンナイト心理バトル</p>
+      
+      <!-- App Store リリース後はリンク先をご自身のアプリURLに変更してください -->
+      <a href="#" class="cta-btn">
+        <span>App Store で見る（近日公開）</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="features">
+      <div class="feature-card">
+        <h2 class="feature-title">◆ 5分で決着</h2>
+        <p class="feature-desc">長時間の準備や複雑なルールは不要。飲み会や友達の集まりでサクッと盛り上がり、「もう1回！」が止まらないテンポ感。</p>
+      </div>
+
+      <div class="feature-card">
+        <h2 class="feature-title">◆ 多彩な特殊役職</h2>
+        <p class="feature-desc">人狼・村人だけでなく、カードを奪う怪盗、吊られたら勝つてるてるなど、個性豊かな役職が予測不能な大逆転を巻き起こします。</p>
+      </div>
+
+      <div class="feature-card">
+        <h2 class="feature-title">◆ 完全無料</h2>
+        <p class="feature-desc">面倒な課金要素は一切なし。スマホ1台または手軽な対面プレイですぐに極上の騙し合いを楽しめます。</p>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="overview-box">
+        <ul>
+          <li><strong>対応OS:</strong> iOS 16.0 以降</li>
+          <li><strong>ジャンル:</strong> パーティー / テーブルゲーム / 心理戦</li>
+          <li><strong>価格:</strong> 完全無料</li>
+          <li><strong>プレイ人数:</strong> 3人〜</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        <!-- Googleフォームで作ったサポートURLをここに設定できます -->
+        <a href="#">サポート・お問い合わせ</a>
+        <span>|</span>
+        <a href="#">プライバシーポリシー</a>
+      </p>
+      <p style="margin-top: 16px;">&copy; 2026 Night Session. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
